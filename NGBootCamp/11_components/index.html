@@ -14,15 +14,12 @@
     }
   </style>
 </head>
-<body first second message="Goodbye Joel">
+<body>
+<custom-title></custom-title>
+  <div ng-controller="AppCtrl as app" >
+    <custom-title></custom-title>
+    <custom-title></custom-title>
 
-  <div ng-controller="AppCtrl as app" first second="test" color-change message="Hi Joel">
-    Touch This Text {{greeting}}
   </div>
-  <div first>
-    <p><span id="thisGuy" color-change="green" test>This is some text --- {{someMessage}}</span></p>
-  </div>
-
-
 </body>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Bootcamp</title>
+  <script src="../vendor/angular.js"></script>
+  <script src="app.js"></script>
+  <style>
+    .green {
+      color: green;
+    }
+    .red {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div ng-controller="AppCtrl as app" >
+    <input type="text" ng-model="app.title">
+    <custom-title title="this is my title"></custom-title>
+    <custom-title title="yet more titles!"></custom-title>
+    <custom-title title="another title"></custom-title>
+    <id-card do-stuff="app.greetPerson(target)" person="app.person"></id-card>
+    <id-card do-stuff="app.insultPerson(target)" person="app.person"></id-card>
+  </div>
+</body>
+</html>
