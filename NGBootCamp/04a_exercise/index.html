@@ -8,11 +8,12 @@
 </head>
 <body>
   <div ng-controller="AppCtrl as app">
+    <input type="text" ng-model="app.newPersonName">
+    <button ng-click="app.addNewPerson()">Add</button>
     <ul>
-      <li ng-repeat="person in app.people track by $index">{{$index+1}} {{person}}</li>
+      <li ng-click="app.handlePersonClicked(person)" ng-repeat="person in app.people track by $index">{{$index+1}} {{person}}</li>
     </ul>
 
-    <div ng-repeat="person in app.people track by $index">{{person}}</div>
   </div>
 </body>
 </html>

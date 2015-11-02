@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Bootcamp</title>
+  <script src="../vendor/angular.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="../vendor/bootstrap.css">
+</head>
+<body>
+
+
+  <div ng-controller="AppCtrl as app">
+    <label>Filter Text: First
+      <input type="text" ng-model="filterText.firstName">
+    </label>
+    <label>Filter Text: Last
+      <input type="text" ng-model="filterText.lastName">
+    </label>
+    <label>Filter Text: Email
+      <input type="text" ng-model="filterText.email">
+    </label>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th ng-click="app.setOrderBy('firstName')">First</th>
+          <th ng-click="app.setOrderBy('lastName')">Last</th>
+          <th ng-click="app.setOrderBy('email')">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="person in app.people | filter:filterText | orderBy: app.orderByProp">
+          <td>{{person.firstName}}</td>
+          <td>{{person.lastName}}</td>
+          <td>{{person.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
