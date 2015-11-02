@@ -29,7 +29,7 @@ angular.module('app', [])
 
     app.setOrderBy = function(value) {
       if(value === app.orderByProp) {
-        value = '!' + value;
+        value = '-' + value;
       }
       app.orderByProp = value;
       console.log($scope);
