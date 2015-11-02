@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Bootcamp</title>
+  <script src="../vendor/angular.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+  <div ng-controller="AppCtrl as app">
+    <input type="text" ng-model="app.message">
+    <button ng-click="app.submit(app.message)">Submit</button>
+    <h1>{{app.displayMessage}}</h1>
+  </div>
+</body>
+</html>

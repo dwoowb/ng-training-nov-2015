@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Bootcamp</title>
+  <script src="../vendor/angular.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+  <div ng-controller="AppCtrl as app">
+    <ul>
+      <li ng-repeat="person in app.people">{{person}}</li>
+    </ul>
+
+    <div ng-repeat="person in app.people">{{person}}</div>
+  </div>
+</body>
+</html>
