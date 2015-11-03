@@ -1,5 +1,6 @@
 angular.module('ps.user-list', [
-  'ui.router'
+  'ui.router',
+  'ps.component.user-info-card'
 ])
   .config(function($stateProvider) {
     $stateProvider
@@ -9,11 +10,15 @@ angular.module('ps.user-list', [
         controller: 'UserListCtrl as userList'
       })
   })
-  .controller('UserListCtrl', function UserListCtrl($http) {
+  .controller('UserListCtrl', function UserListCtrl(userListModel) {
     var userList = this;
 
-    $http.get('https://api.github.com/users').then(function (result) {
-      userList.users = result.data;
-    })
+    userListModel.getUsers().then(function(users) {
+      userList.users = users;
+    });
+
+    userList.doSomeManipulation = function(user) {
+      console.log('manipulating ' + user.login)
+    }
   })
 ;
