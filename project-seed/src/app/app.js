@@ -6,5 +6,7 @@ angular.module('project-seed', [
   'angularMoment',
   'templates-app'
 ])
-
+  .config(function($urlRouterProvider) {
+    $urlRouterProvider.otherwise('/users');
+  })
 ;
