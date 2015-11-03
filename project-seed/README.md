@@ -2,7 +2,8 @@
 
 Cool Links!
 
-http://teropa.info/blog/2015/10/18/refactoring-angular-apps-to-components.html
+* http://teropa.info/blog/2015/10/18/refactoring-angular-apps-to-components.html
+* http://googletesting.blogspot.com/2010/07/code-coverage-goal-80-and-no-less.html
 
 This project uses [node.js](http://nodejs.org/). You will need to install node. 
   

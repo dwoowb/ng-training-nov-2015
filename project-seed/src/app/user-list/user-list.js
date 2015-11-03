@@ -10,7 +10,7 @@ angular.module('ps.user-list', [
         controller: 'UserListCtrl as userList'
       })
   })
-  .controller('UserListCtrl', function UserListCtrl(userListModel) {
+  .controller('UserListCtrl', function UserListCtrl(userListModel, $state) {
     var userList = this;
 
     userListModel.getUsers().then(function(users) {
@@ -18,7 +18,7 @@ angular.module('ps.user-list', [
     });
 
     userList.doSomeManipulation = function(user) {
-      console.log('manipulating ' + user.login)
+      $state.go('userProfile', {username: user.login});
     }
   })
 ;
