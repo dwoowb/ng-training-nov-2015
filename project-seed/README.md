@@ -1,5 +1,9 @@
 
 
+Cool Links!
+
+http://teropa.info/blog/2015/10/18/refactoring-angular-apps-to-components.html
+
 This project uses [node.js](http://nodejs.org/). You will need to install node. 
   
   We will need some global libraries.
